@@ -1,5 +1,7 @@
+import DashboardPage from "./ui/pages/DashboardPage";
+
 function App() {
-  return <h1>Job Tracker</h1>;
+  return <DashboardPage />;
 }
 
 export default App;
