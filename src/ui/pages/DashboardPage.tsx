@@ -1,4 +1,5 @@
 import Header from "../components/common/Header/Header";
+import DashboardIntro from "../components/dashboard/DashboardIntro/DashboardIntro";
 
 export default function DashboardPage() {
   return (
@@ -6,7 +7,7 @@ export default function DashboardPage() {
       <Header />
 
     <main>
-      <p>Manage your job applications efficiently.</p>
+      <DashboardIntro />
     </main>
     </>
   );
