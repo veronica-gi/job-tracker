@@ -1,8 +1,13 @@
+import Header from "../components/common/Header/Header";
+
 export default function DashboardPage() {
   return (
+     <>
+      <Header />
+
     <main>
-      <h1>Job Tracker</h1>
       <p>Manage your job applications efficiently.</p>
     </main>
+    </>
   );
 }
