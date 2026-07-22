@@ -1,0 +1,13 @@
+.application-form {
+  margin-top: 2rem;
+}
+
+.application-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.application-form input {
+  padding: 0.5rem;
+}
