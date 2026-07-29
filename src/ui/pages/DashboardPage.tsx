@@ -2,8 +2,11 @@ import Header from "../components/common/Header/Header";
 import DashboardIntro from "../components/dashboard/DashboardIntro/DashboardIntro";
 import StatsSection from "../components/dashboard/StatsSection/StatsSection";
 import ApplicationForm from "../components/dashboard/ApplicationForm/ApplicationForm";
+import useApplications from "../hooks/useApplications";
 
 export default function DashboardPage() {
+  const { applications, addApplication } = useApplications();
+  
   return (
      <>
       <Header />
@@ -11,7 +14,7 @@ export default function DashboardPage() {
     <main>
       <DashboardIntro />
       <StatsSection />
-      <ApplicationForm />
+      <ApplicationForm addApplication={addApplication} />
     </main>
     </>
   );

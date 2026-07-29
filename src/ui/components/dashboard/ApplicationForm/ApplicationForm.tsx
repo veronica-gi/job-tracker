@@ -1,23 +1,42 @@
 import { useState } from "react";
 import "./ApplicationForm.css";
+import type { Application, ApplicationStatus} from "../../../../core/models/Application";
 
-export default function ApplicationForm() {
+interface ApplicationFormProps {
+  addApplication: (application: Application) => void;
+}
+
+export default function ApplicationForm({
+  addApplication,
+}: ApplicationFormProps) {
+
+  
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
-  const [status, setStatus] = useState("Applied");
+  const [status, setStatus] = useState<ApplicationStatus>("Applied");
   const [applicationDate, setApplicationDate] = useState("");
   const [notes, setNotes] = useState("");
 
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 
-  console.log({
+  const application: Application = {
+  id: crypto.randomUUID(),
     company,
     position,
     status,
     applicationDate,
     notes,
-  });
+  };
+
+addApplication(application);
+
+setCompany("");
+  setPosition("");
+  setStatus("Applied");
+  setApplicationDate("");
+  setNotes("");
 };
 
   return (
@@ -51,7 +70,9 @@ export default function ApplicationForm() {
           <label htmlFor="status">Estado</label>
           <select id="status"
           value={status}
-          onChange={(e) => setStatus(e.target.value)}
+          onChange={(e) =>
+          setStatus(e.target.value as ApplicationStatus)
+          }
           >
             <option value="Applied">Enviada</option>
             <option value="Interview">Entrevista</option>
