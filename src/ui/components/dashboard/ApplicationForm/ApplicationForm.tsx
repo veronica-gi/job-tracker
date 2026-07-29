@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type SubmitEvent } from "react";
 import "./ApplicationForm.css";
 import type { Application, ApplicationStatus} from "../../../../core/models/Application";
 
@@ -18,7 +18,7 @@ export default function ApplicationForm({
   const [notes, setNotes] = useState("");
 
   
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
   event.preventDefault();
 
   const application: Application = {
