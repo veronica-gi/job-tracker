@@ -8,11 +8,23 @@ export default function ApplicationForm() {
   const [applicationDate, setApplicationDate] = useState("");
   const [notes, setNotes] = useState("");
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  console.log({
+    company,
+    position,
+    status,
+    applicationDate,
+    notes,
+  });
+};
+
   return (
     <section className="application-form">
       <h2>Nueva candidatura</h2>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="company">Empresa</label>
           <input
