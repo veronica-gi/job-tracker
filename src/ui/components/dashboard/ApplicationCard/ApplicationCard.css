@@ -20,3 +20,33 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+/* Estados */
+.status-applied {
+  background-color: #80bddd;
+}
+
+.status-interview {
+  background-color: #fde68a;
+}
+.status-interview .status-badge {
+  background-color: #d97706;
+  color: white;
+}
+
+.status-offer {
+  background-color: #9ceeb8;
+}
+
+.status-offer .status-badge {
+  background-color: #16a34a;
+  color: white;
+}
+
+.status-rejected {
+  background-color: #fecaca;
+}  
+  .status-rejected .status-badge {
+  background-color: #dc2626;
+  color: white;
+}

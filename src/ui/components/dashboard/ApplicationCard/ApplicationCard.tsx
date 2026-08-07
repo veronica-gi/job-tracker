@@ -16,10 +16,12 @@ export default function ApplicationCard({
   };
 
   return (
-    <article className="application-card">
+     <article
+      className={`application-card status-${application.status.toLowerCase()}`}
+    >
       <h3>{application.company}</h3>
       <p>{application.position}</p>
-      <span className={`status-badge status-${application.status.toLowerCase()}`}>
+      <span className="status-badge">
         {statusLabels[application.status]}
       </span>
       <p>{application.applicationDate}</p>
