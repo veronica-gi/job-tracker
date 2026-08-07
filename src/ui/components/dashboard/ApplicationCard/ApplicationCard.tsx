@@ -19,7 +19,9 @@ export default function ApplicationCard({
     <article className="application-card">
       <h3>{application.company}</h3>
       <p>{application.position}</p>
-      <p>{statusLabels[application.status]}</p>
+      <span className={`status-badge status-${application.status.toLowerCase()}`}>
+        {statusLabels[application.status]}
+      </span>
       <p>{application.applicationDate}</p>
       <p>{application.notes}</p>
     </article>
