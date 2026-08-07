@@ -1,3 +1,4 @@
+import "./ApplicationCard.css";
 import type { Application } from "../../../../core/models/Application";
 
 interface ApplicationCardProps {
