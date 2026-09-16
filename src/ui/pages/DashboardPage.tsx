@@ -14,7 +14,7 @@ export default function DashboardPage() {
 
     <main>
       <DashboardIntro />
-      <StatsSection />
+      <StatsSection applications={applications} />
       <ApplicationForm addApplication={addApplication} />
       <ApplicationsList
   applications={applications}
