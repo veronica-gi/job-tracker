@@ -1,14 +1,19 @@
 .stats-card {
-  padding: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: white;
+  text-align: center;
 }
 
 .stats-card h3 {
+  margin: 0 0 0.5rem;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .stats-card p {
+  margin: 0;
   font-size: 2rem;
   font-weight: bold;
 }
