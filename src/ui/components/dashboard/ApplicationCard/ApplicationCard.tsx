@@ -3,10 +3,12 @@ import type { Application } from "../../../../core/models/Application";
 
 interface ApplicationCardProps {
   application: Application;
+  deleteApplication: (id: string) => void;
 }
 
 export default function ApplicationCard({
   application,
+  deleteApplication,
 }: ApplicationCardProps) {
   const statusLabels = {
     Applied: "Enviada",
@@ -26,6 +28,11 @@ export default function ApplicationCard({
       </span>
       <p>{application.applicationDate}</p>
       <p>{application.notes}</p>
+
+      <button onClick={() => deleteApplication(application.id)}>
+        Eliminar
+      </button>
     </article>
+    
   );
 }

@@ -6,7 +6,7 @@ import useApplications from "../hooks/useApplications";
 import ApplicationsList from "../components/dashboard/ApplicationsList/ApplicationsList";
 
 export default function DashboardPage() {
-  const { applications, addApplication } = useApplications();
+  const { applications, addApplication, deleteApplication } = useApplications();
   
   return (
      <>
@@ -18,6 +18,7 @@ export default function DashboardPage() {
       <ApplicationForm addApplication={addApplication} />
       <ApplicationsList
   applications={applications}
+  deleteApplication={deleteApplication}
 />
     </main>
     </>

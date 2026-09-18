@@ -8,8 +8,15 @@ export default function useApplications() {
     setApplications((prev) => [...prev, application]);
   };
 
+  const deleteApplication = (id: string) => {
+  setApplications((prev) =>
+    prev.filter((application) => application.id !== id)
+  );
+};
+
   return {
     applications,
     addApplication,
+    deleteApplication,
   };
 }
