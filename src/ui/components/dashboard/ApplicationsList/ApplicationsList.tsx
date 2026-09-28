@@ -5,17 +5,15 @@ import ApplicationCard from "../ApplicationCard/ApplicationCard";
 interface ApplicationsListProps {
   applications: Application[];
   deleteApplication: (id: string) => void;
+  updateApplication: (updatedApplication: Application) => void;
 }
 
 export default function ApplicationsList({
   applications,
 deleteApplication,
+updateApplication,
 }: ApplicationsListProps) {
-  console.log("PROPS ApplicationsList:", {
-    applications,
-    deleteApplication,
-  });
-  
+    
   return (
     <section className="applications-list">
       <h2>Candidaturas</h2>
@@ -25,6 +23,7 @@ deleteApplication,
           key={application.id}
           application={application}
           deleteApplication={deleteApplication}
+          updateApplication={updateApplication}
         />
       ))}
     </section>

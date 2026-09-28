@@ -14,9 +14,20 @@ export default function useApplications() {
   );
 };
 
+const updateApplication = (updatedApplication: Application) => {
+  setApplications((prev) =>
+    prev.map((application) =>
+      application.id === updatedApplication.id
+        ? updatedApplication
+        : application
+    )
+  );
+};
+
   return {
     applications,
     addApplication,
     deleteApplication,
+    updateApplication,
   };
 }
