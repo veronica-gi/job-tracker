@@ -50,3 +50,59 @@
   background-color: #dc2626;
   color: white;
 }
+
+
+/* Formulario de edición */
+.application-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.application-edit-form input,
+.application-edit-form select,
+.application-edit-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font: inherit;
+  background-color: white;
+}
+
+.application-edit-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.application-edit-form input:focus,
+.application-edit-form select:focus,
+.application-edit-form textarea:focus {
+  outline: 2px solid #7070c2;
+  outline-offset: 1px;
+  border-color: #7070c2;
+}
+
+.application-edit-form button {
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.application-edit-form button:first-of-type {
+  background-color: #7070c2;
+  color: white;
+}
+
+.application-edit-form button:last-of-type {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.application-edit-form button:hover {
+  opacity: 0.85;
+}
