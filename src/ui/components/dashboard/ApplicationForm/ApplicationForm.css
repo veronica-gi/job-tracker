@@ -1,5 +1,16 @@
+
 .application-form {
   margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.application-form h2 {
+  margin: 0 0 1.25rem;
+  color: #1f2937;
+  font-size: 1.25rem;
 }
 
 .application-form form {
@@ -8,6 +19,51 @@
   gap: 1rem;
 }
 
-.application-form input {
-  padding: 0.5rem;
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font: inherit;
+  color: #374151;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  outline: none;
+  border-color: #7070c2;
+  box-shadow: 0 0 0 3px rgb(112 112 194 / 15%);
+}
+
+.application-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.application-form button {
+  align-self: center;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #7070c2;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.application-form button:hover {
+  background-color: #5b5ba8;
+}
+
+.application-form button:focus-visible {
+  outline: 2px solid #7070c2;
+  outline-offset: 3px;
 }
