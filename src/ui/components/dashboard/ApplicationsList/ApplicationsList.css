@@ -1,9 +1,26 @@
+
 .applications-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  align-items: stretch;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  min-width: 0;
 }
 
 .applications-list h2 {
   grid-column: 1 / -1;
+  margin: 0;
+  color: #292943;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .applications-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
 }

@@ -1,6 +1,27 @@
+
 .stats-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   padding: 1.5rem;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .stats-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.875rem;
+    padding: 1rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .stats-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
 }

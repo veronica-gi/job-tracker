@@ -239,3 +239,63 @@
 .application-card-actions button {
   flex: 1;
 }
+
+
+
+/* Evitar desbordamientos */
+.application-card {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.application-card-header {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.application-card-header > div {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+.application-card .status-badge {
+  white-space: normal;
+  text-align: center;
+}
+
+.application-card-actions {
+  min-width: 0;
+}
+
+.application-card-actions button {
+  min-width: 0;
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .application-card {
+    padding: 0.875rem;
+  }
+
+  .application-card-header {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .application-card h3 {
+    font-size: 1rem;
+  }
+
+  .application-card-actions {
+    gap: 0.5rem;
+  }
+
+  .application-card-actions button {
+    padding: 0.65rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .application-edit-form button {
+    width: 100%;
+  }
+}
