@@ -106,3 +106,58 @@
 .application-edit-form button:hover {
   opacity: 0.85;
 }
+
+
+/* Botones de la tarjeta */
+.application-card button {
+  padding: 0.6rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Editar */
+.application-card > button:first-of-type {
+  background-color: #7070c2;
+  color: #fff;
+}
+
+.application-card > button:first-of-type:hover {
+  background-color: #5b5ba8;
+}
+
+/* Eliminar */
+.application-card > button:last-of-type {
+  background-color: #fff;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.application-card > button:last-of-type:hover {
+  background-color: #fef2f2;
+  border-color: #f87171;
+}
+
+/* Accesibilidad */
+.application-card button:focus-visible {
+  outline: 2px solid #7070c2;
+  outline-offset: 3px;
+}
+
+/* Botones del formulario de edición */
+.application-edit-form button:first-of-type:hover {
+  background-color: #5b5ba8;
+  opacity: 1;
+}
+
+.application-edit-form button:last-of-type:hover {
+  background-color: #d1d5db;
+  opacity: 1;
+}
